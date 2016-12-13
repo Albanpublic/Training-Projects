@@ -90,6 +90,8 @@ customNsp.on('connection', function (socket) {
 		    console.log("ID:",id)  // socketId
 		})
 	});
+
+	// RANDOM COMMENT
 	socket.on('Who', function (roomName) {
 		if (roomName != 'no room'){
 			console.log('User list from room object : ' + roomName);
