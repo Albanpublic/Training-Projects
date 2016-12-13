@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+  <head>
+    <title>multi room</title>
+    <style>
+    </style>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="JqueryUi/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+
+  <div id="leftBarWrapper">
+  <div id="leftBar">
+  	<div id="buttons"> 
+    <!-- <button id="btn1"> join room1 </button>
+    <button id="btn2"> join room2 </button> -->
+    <button id="btn3"> leave room </button>
+    <button id="btn4"> message to room 1</button>
+    <button id="btn5"> message to room 2</button>
+    <button id="btn6"> show list of rooms</button>
+    <button id="btn7"> show rooms in</button>
+    <button id="btn8"> Who's Here?</button>
+    <button id="btn9"> Create a room</button>
+    </div>
+
+    
+    <div id="listTabs">
+	  <ul>
+	    <li class="individualListTabs"><a href="#users-tab">Users</a></li>
+	    <li class="individualListTabs"><a href="#room-tab">Rooms</a></li>
+	    <li class="individualListTabs"><a href="#friend-tab">Friend</a></li>
+	  </ul>
+	  <div id="users-tab">
+	    <p> USER LIST: </p>
+    	<ul id="users">
+    	</ul>
+	  </div>
+	  <div id="room-tab">
+	    <p> ROOM LIST: </p>
+    	<ul id="rooms">
+    	</ul>
+	  </div>
+	  <div id="friend-tab">
+	    <p> FRIEND LIST: </p>
+    	<ul id="friends">
+    		<li> Only you buddy </li>
+    	</ul>
+	  </div>
+	</div>
+
+   </div><!-- leftBar -->
+   </div><!-- leftBarWrapper -->
+
+
+   <div id="mainHubWrapper">
+	<div id="mainHub">
+	<h1 id="h1"> GENERAL </h1>
+	<p id="someStuff"> AND BLALBAKFKS </p>
+		<div id="board"> 
+		<table>
+		  <tr>
+		    <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td>
+		  </tr>
+		  <tr>
+		    <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td>
+		  </tr>
+		  <tr>
+		    <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td> <td><div class="pawn"></div></td>
+		  </tr>
+		</table>
+
+		</div>
+
+		<div id="players"> 
+		<table>
+			<tr> <td>Red Player: </td>  <td>Blue Player: </td></tr>
+			<tr> <td> </td>  <td> </td></tr>
+		</table>
+		</div>
+
+   </div>
+   </div>
+
+   <div id="chatBarWrapper">
+   <div id="chatBar">
+
+   
+
+	<div id="chatSpace">
+
+		<div id="chatTabs">
+		  <ul id="chatTabsUl">
+		    <li><a href="#general-tab">General</a></li>
+		  </ul>
+		   <div id="general-tab">
+		  </div>
+
+
+
+		</div>
+
+
+
+		<div id="chatInput">
+		    <form action="" id="chatForm">
+		    <input id="chatInputTextField" autocomplete="off" type="text" name="chat"> <button id="chatInputButton"> Send Message</button>
+		    </form>
+	    </div>
+
+    </div>
+    
+
+   </div>
+   </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+  <!-- initialises the tabs -->
+  <script>
+  $( function() {
+    $( "#listTabs" ).tabs();
+  } );
+  </script>
+  <script>
+  $( function() {
+    $( "#chatTabs" ).tabs();
+  } );
+  </script>
+
+  <script>
+
+  //////////////////////// TODO LIST  //////////////////////
+  // - erase function in the erase function
+  // - BUG Already present username not popping. Sometimes not working well. Explore why.
+  // - Private message function
+  // - PROBLEM WITH THE DELETING OF TABS. NOT PROPERLY REMOVING EVERYTHING
+
+
+
+
+    var socket = io('/customNamespace');
+
+    var nickname = prompt("Please enter your nickname", 'Sandy');
+
+    if (nickname != null) {
+    	socket.emit('setNickname', nickname);
+    }
+
+    // var button1 = document.getElementById('btn1');
+    // var button2 = document.getElementById('btn2');
+    var button3 = document.getElementById('btn3');
+    var button4 = document.getElementById('btn4');
+    var button5 = document.getElementById('btn5');
+    var button6 = document.getElementById('btn6');
+    var button7 = document.getElementById('btn7');
+    var button8 = document.getElementById('btn8');
+    var button9 = document.getElementById('btn9');
+    var chatInputButton = document.getElementById('chatInputButton');
+    var title = document.getElementById('h1');
+    var roomList = document.getElementById('rooms');
+    var userList = document.getElementById('users');
+    var friendList = document.getElementById('friends');
+
+    var room = 'general';
+
+    // button1.onclick = function(){
+    // 	socket.emit('joinRoom', 'room1');
+    // 	title.innerHTML = "Here is room 1";
+    // 	room = 'room1';
+    // };
+    // button2.onclick = function(){
+    // 	socket.emit('joinRoom', 'room2');
+    // 	title.innerHTML = "Here is room 2";
+    // 	room = 'room2';
+    // };
+    button3.onclick = function(){
+    	socket.emit('leave', room);
+    	title.innerHTML = "general";
+    	room = 'general';
+    };
+    button4.onclick = function(){
+    	socket.emit('message', 'room1', 'from : ' + room);
+    };
+    button5.onclick = function(){
+    	socket.emit('message', 'room2', 'from : ' + room);
+    };
+    button6.onclick = function(){
+    	socket.emit('showRooms');
+    };
+    button7.onclick = function(){
+    	socket.emit('showRoomsIn');
+    };
+    button8.onclick = function(){
+    	socket.emit('Who', room);
+    };
+    button9.onclick = function(){
+    	var roomName = prompt("Please enter your room name. No funky characters please. Spaces are gonna be trimmed", nickname + ' room');
+        roomName = roomName.replace(/\s/g,'');
+    	socket.emit('createRoom', roomName);
+    };
+    
+
+    // Submit the message and check the active tab to send the message to the right place.
+    $('form').submit(function(){
+
+        var selectedTab = $("#chatTabs .ui-tabs-panel:visible").attr("id");
+
+        // Get the roomName from the selected tab id.
+        var roomName = selectedTab.slice(0, selectedTab.length - 4);
+
+	    socket.emit('post chat', $('#chatInputTextField').val(), roomName);
+	    $('#chatInputTextField').val(''); 
+	return false;
+	});
+
+    socket.on('messagePrint', function (msg) {
+    	createDiv(msg);
+    });
+
+    socket.on('greetings', function (message, id) {
+      console.log( 'Got a message from the server: "' + message + '", my ID is: ' + id);
+    });
+
+
+    // After joining, create a tab for the new guy and removing tabs for the room left.
+    socket.on('joined', function (roomName, roomChat, nickname) {
+
+        var newcomer = true;
+        var oldRoom = room;
+
+        var allTabs = $('#chatTabs ul li a');
+        for (var i = 0; i < allTabs.length; i++) {
+            // console.log('i is ' + i + ', roomName is ' + roomName + ', allTabs[i].text is ' + allTabs[i].text);
+            if ( roomName === allTabs[i].text ) {
+                newcomer = false;
+                break;
+            }
+        }
+
+    	room = roomName;
+        // If not general room or for the guy coming in the room, create a new tab for this chat.
+        if (roomName != 'general' && newcomer ){
+            createChatTab(roomName);
+            if ( allTabs.length > 1 ){
+                removeTab(oldRoom);
+            }
+            
+        }
+        
+    });
+    socket.on('joinedPrivate', function (roomName, roomChat, nickname) {
+        createChatTab (roomName);
+    });
+
+    socket.on('newChatLine', function (msg, roomName) {
+        var roomChatId = roomName + '-tab'
+        console.log('sending to room with id : ' + roomChatId);
+        var roomChat = document.getElementById(roomChatId);
+    	appendChatP(msg, roomChat);
+    });
+
+    socket.on('addRoomToList', function (roomName) {
+    	addRoomToList(roomName);
+    });
+    socket.on('removeRoomFromList', function (roomName) {
+    	removeRoomFromList(roomName);
+    });
+    socket.on('addUserToList', function (userNickname) {
+    	addUserToList(userNickname);
+    });
+    socket.on('removeUserFromList', function (userNickname) {
+    	removeUserFromList(userNickname);
+    });
+    socket.on('eraseAndPrintChat', function (roomName, roomChat) {
+        eraseAndPrintChat(roomName, roomChat, 'TBD');
+    });
+
+    // NO ERASE FUNCTION IMPLEMENTED SO FAR!
+    // Erase the present chat on the given tab and then print it all
+    function eraseAndPrintChat (roomName, roomChat, userNickname) {
+        var pageChat = document.getElementById(roomName + "-tab");
+        var chatList = roomChat;
+        for(var i = 0; i < chatList.length; i++) {
+            appendChatP(chatList[i].toString(), pageChat, userNickname);
+        }
+
+    }
+
+    // Set the index 0 tab to active and delete the tab matching the argument (by id);
+    function removeTab ( tabToRemove ) {
+
+        $( "#chatTabs" ).tabs({ active: 0 });
+
+        $('#chatTabs ul li a').each(function(){
+
+            //console.log( 'this.text : ' + $(this).text() + ' , tabToRemove : ' + tabToRemove );
+
+            if ( $(this).text() === tabToRemove) {
+                $(this).remove();
+            }
+
+        });
+
+        $("div#chatTabs").tabs("refresh");
+    }
+
+    // Create a new chatTab with the value of the room (or maybe the name of the sender).
+    function createChatTab (name) {
+
+        name = name.replace(/\s/g,'')
+
+        $("div#chatTabs").tabs();
+
+        $("div#chatTabs ul").append(
+            "<li><a href='#" + name + "-tab'>" + name + "</a></li>"
+        );
+        
+        $("div#chatTabs").append(
+            "<div id='" + name + "-tab'>text for testing purposes</div>"
+        );
+
+        $("div#chatTabs").tabs("refresh");
+
+        var index = $('#chatTabs ul li a').length - 1;
+
+        $( "#chatTabs" ).tabs({ active: index });
+    }
+
+    // Create a div with a given text in the body
+    function createDiv (text) {
+    	var newDiv = document.createElement('div');
+    	var newContent = document.createTextNode(text);
+    	newDiv.appendChild(newContent);
+
+    	document.body.appendChild(newDiv);
+    }
+
+    // Create a p element with given text to target element.
+    function appendChatP (text, targetElement, userNickname) {
+
+    	var newLine = document.createElement('p');
+    	var date = new Date();
+    	var hours = date.getHours();
+    	var minutes = date.getMinutes();
+    	var newContent = document.createTextNode(hours + ':' + minutes + ' : ' + userNickname + ' : ' + text);
+    	newLine.appendChild(newContent);
+        targetElement.appendChild(newLine);
+    }
+
+
+    // Create a li element with given text to target element.
+    function appendChat (text, target) {
+    	var newLine = document.createElement('li');
+    	var newContent = document.createTextNode(text);
+    	newLine.appendChild(newContent);
+    	document.getElementById(target).appendChild(newLine);
+    }
+    function clearChat (targetElement) {
+        console.log(targetElement.parentNode);
+    	targetElement.parentNode.removeChild(targetElement);
+    	var newList = document.createElement('ul');
+    	newList.id = target;
+    	var parentDiv = document.getElementById('chatSpace');
+    	parentDiv.appendChild(newList);
+    }
+    function addRoomToList (roomName) {
+    	var newli = document.createElement('li');
+    	var newRoom = document.createElement('button');
+    	newRoom.className = "roomListClass";
+    	newRoom.onclick = function(){
+            roomName = roomName.replace(/\s/g,'');
+    		socket.emit('createRoom', roomName);
+    		title.innerHTML = "Here is " + roomName;
+    	};
+    	var newContent = document.createTextNode(roomName);
+    	newRoom.appendChild(newContent);
+    	newli.id = roomName + 'room';
+    	newli.appendChild(newRoom);
+    	roomList.appendChild(newli);
+    }
+
+
+    function removeRoomFromList (roomName) {
+    	var roomLine = document.getElementById(roomName + 'room');
+    	roomList.removeChild(roomLine);
+    }
+
+    function addUserToList (userListNickname) {
+    	var newli = document.createElement('li');
+    	var newUser = document.createElement('button');
+    	newUser.className = "userListClass";
+    	newUser.onclick = function(){
+            var privateRoomName = userListNickname + '-' + nickname;
+            var privateRoomName2 = nickname + '-' + userListNickname;
+            console.log(privateRoomName + ' : ' + privateRoomName2);
+            if ( userListNickname !== nickname && !alreadyOpenPrivateChat(privateRoomName, privateRoomName2)) {
+                socket.emit('openPrivateTab', userListNickname, nickname, privateRoomName);
+            }
+    		
+    	};
+    	var newContent = document.createTextNode(userListNickname);
+    	newUser.appendChild(newContent);
+    	newli.id = userListNickname + 'user';
+    	newli.appendChild(newUser);
+    	userList.appendChild(newli);
+    }
+
+    function removeUserFromList (userNickname) {
+    	var userLine = document.getElementById(userNickname + 'user');
+    	userList.removeChild(userLine);
+    }
+
+    function alreadyOpenPrivateChat (privateRoomName, privateRoomName2) {
+        var alreadyOpen = false;
+
+
+        return alreadyOpen;
+    }
+
+
+  </script>
+
+
+  </body>
+</html>
