@@ -38,20 +38,20 @@ public class CrazyNumbers {
 	
 	private static long[] alphabet = new long[26];
 	private static Letters[] letters = Letters.values();
-//	private static String input = "abcd10(e3(2g10(z1000(hx(ww))i)dg)5q)3f";
-//	private static String testInput = "10000(10000(1#0000(2000(ab)500(dz)c200h)2mu3000(fpr)))";
+	private static String input = "abcd10(e3(2g10(z1000(hx(ww))i)dg)5q)3f";
+	private static String testInput = "10000(10000(1#0000(2000(ab)500(dz)c200h)2mu3000(fpr)))";
 
 	public static void main(String[] args) throws IOException {
 		
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String line = br.readLine().trim();
-		
-		String input = line;
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		String line = br.readLine().trim();
+//		
+//		String input = line;
 		//input = input.toLowerCase();
 		
-//		System.out.println("input is " + input);
-//		System.out.println();
+		System.out.println("input is " + input);
+		System.out.println();
 		Pattern check = Pattern.compile("[^a-z0-9()]");
 		Matcher checkMatch = check.matcher(input);
 		boolean unwantedCharacter = checkMatch.find();
@@ -63,7 +63,7 @@ public class CrazyNumbers {
 		}
 	}
 	
-	//Original algorithm using recursion.
+	//Original algorithm using recursion. Not working as of now.
 	
 //	static String treatString(String str){
 //		System.out.println("String entering is " + str);
