@@ -24,8 +24,20 @@ In subfolder I put some other diverse projects:
 - paiza skill check
 
 
+# Set-up / 使い方
 
-TO DO LIST:
+
+- [Make sure Node.JS is installed.](https://nodejs.org/en/"Node.JS download page")
+- install dependencies
+	`npm install --save`
+	`npm install --save express@4.10.2`
+- run `node multiServer.js`
+- point you browser to `http://localhost:3000`
+
+
+
+
+#　TO DO LIST:
   - Finish the private message system
   - Finish the chat (Erase of old one and displaying only the needed one)
   - Organize code in module
