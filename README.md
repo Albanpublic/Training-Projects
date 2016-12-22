@@ -7,7 +7,8 @@ JavaScript/Socket IO real-time multi-user chat.
 * Still a work in progress
 
 In subfolder I put some other diverse projects:
-- paiza skill check
+- paiza skill check (java)
+- HappyEnquete （ハッピーアンケート） (swift application)
 - more to come...
 
 
@@ -21,11 +22,12 @@ In subfolder I put some other diverse projects:
 *　また開発中
 
 サブフォルダーにいろいろなプロジェクトがあります：
-- paiza skill check
+- paiza skill check (java)
+- ハッピーアンケート (swift アプリ)
+
 
 
 # Set-up / 使い方
-
 
 - [Make sure Node.JS is installed.](https://nodejs.org/en/ "Node.JS download page")
 - install dependencies
@@ -35,6 +37,14 @@ In subfolder I put some other diverse projects:
 - point your browser to `http://localhost:3000`
 
 
+# HappyEnquete / ハッピーアンケート
+
+Swift application. See the included manual for use instructions.
+Having no more access to the school mac, I could not finalize the
+project. Also I do not know how it will act when cloned.
+Swiftアプリケーション。　PowerPointのマニュアルが入っています。
+学校のMacにはアクセスは出来ませんのでこのまま入れました。ソースコードを見るためにアップロード
+しました。
 
 
 #　TO DO LIST:
