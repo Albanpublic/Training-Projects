@@ -42,6 +42,7 @@ In subfolder I put some other diverse projects:
 Swift application. See the included manual for use instructions.
 Having no more access to the school mac, I could not finalize the
 project. Also I do not know how it will act when cloned.
+
 Swiftアプリケーション。　PowerPointのマニュアルが入っています。
 学校のMacにはアクセスは出来ませんのでこのまま入れました。ソースコードを見るためにアップロード
 しました。
