@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/CollectionItem.swift"
+            timestampString = "476775194.956903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CollectionItem"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.id.getter : Swift.Int"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.721621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.id.setter : Swift.Int"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.723472"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.id.materializeForSet : Swift.Int"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.723686"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.init (hereWeGo.CollectionItem.Type)() -&gt; hereWeGo.CollectionItem"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.723862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.init (hereWeGo.CollectionItem.Type)(value : Swift.AnyObject) -&gt; hereWeGo.CollectionItem"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.724037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.init (hereWeGo.CollectionItem.Type)(realm : __ObjC.RLMRealm, schema : __ObjC.RLMObjectSchema) -&gt; hereWeGo.CollectionItem"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.724211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.CollectionItem.init (hereWeGo.CollectionItem.Type)(value : Swift.AnyObject, schema : __ObjC.RLMSchema) -&gt; hereWeGo.CollectionItem"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/CollectionItem.swift"
+                  timestampString = "476775195.724376"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/MainMenuViewController.swift"
+            timestampString = "477217092.115085"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_C641F75309DA66D245AD7CBFACC1D03E_func0"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/MainMenuViewController.swift"
+                  timestampString = "477470215.988602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "hereWeGo.globalCatCount.unsafeMutableAddressor : Swift.Int"
+                  moduleName = "hereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zemiken/Desktop/hereWeGo/hereWeGo/MainMenuViewController.swift"
+                  timestampString = "477470215.988862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/ResultViewController.swift"
+            timestampString = "482224466.878597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/MainMenuViewController.swift"
+            timestampString = "485238356.91188"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "collectionQuery()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/Collection2ViewController.swift"
+            timestampString = "477831493.756188"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "collectionView(_:didSelectItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/SettingViewController.swift"
+            timestampString = "482224738.271958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "writeText(_:b:c:d:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/NakamaViewController.swift"
+            timestampString = "485242367.785057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hereWeGo/NakamaViewController.swift"
+            timestampString = "485242367.785057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
